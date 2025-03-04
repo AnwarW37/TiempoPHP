@@ -25,7 +25,7 @@ sudo apt install apache2 php libapache2-mod-php -y
 Se clona el repositorio de la aplicación en el directorio de Apache:
 ```bash
 cd /var/www/html/
-sudo git clone https://github.com/usuario/TiempoPHP.git
+sudo git clone [https://github.com/usuario/TiempoPHP.git](https://github.com/AnwarW37/TiempoPHP.git)
 ```
 
 ### 4. Configuración del Servidor Web
