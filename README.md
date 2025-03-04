@@ -78,9 +78,9 @@ Se asigna un dominio al servidor mediante DNS, vinculando la IP pública de la i
 ## Tecnologías Utilizadas
 - PHP
 - Apache
-- AWS (EC2)
+- AWS
 - OpenWeatherMap API
-- Let's Encrypt (SSL)
+- OpenSSL
 
 ---
 
