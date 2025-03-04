@@ -1,9 +1,87 @@
 # TiempoPHP
-Esta práctica consiste en desarrollar una aplicación PHP que permita consultar el tiempo atmosférico en cualquier ciudad del mundo. Para ello, se debe utilizar la API openweathermap.org.
 
-1) En primer lugar he creado una instancia en aws.
-2) Instalamos APACHE y PHP.
-3) Clonamos el repositorio.
-4) Habilitamos sitio
-5) Habilitar HTTPS y certificado
-6) Dominio
+## Descripción
+TiempoPHP es una aplicación desarrollada en PHP que permite consultar el tiempo atmosférico de cualquier ciudad del mundo utilizando la API de [OpenWeatherMap](https://openweathermap.org/).
+
+Este proyecto está desplegado en una instancia de AWS y utiliza Apache como servidor web, asegurando su accesibilidad mediante HTTPS y un dominio personalizado.
+
+---
+
+## Instalación y Configuración
+
+### 1. Creación de Instancia en AWS
+Se ha configurado una instancia en AWS con los siguientes elementos:
+- Asignación de una dirección IP pública.
+- Configuración del grupo de seguridad para permitir tráfico HTTP/HTTPS.
+
+### 2. Instalación de Apache y PHP
+Una vez creada la instancia, se accede a ella mediante SSH y se instalan Apache y PHP:
+```bash
+sudo apt update
+sudo apt install apache2 php libapache2-mod-php -y
+```
+
+### 3. Clonación del Repositorio
+Se clona el repositorio de la aplicación en el directorio de Apache:
+```bash
+cd /var/www/html/
+sudo git clone https://github.com/usuario/TiempoPHP.git
+```
+
+### 4. Configuración del Servidor Web
+Se edita la configuración de Apache para establecer el DocumentRoot en la carpeta del proyecto:
+```bash
+sudo nano /etc/apache2/sites-available/000-default.conf
+```
+Modificar la línea correspondiente:
+```
+DocumentRoot /var/www/html/TiempoPHP
+```
+Aplicar los cambios:
+```bash
+sudo systemctl restart apache2
+```
+
+### 5. Configuración de HTTPS y Certificado SSL
+Se instala y configura un certificado SSL con Let's Encrypt:
+```bash
+sudo apt install certbot python3-certbot-apache -y
+sudo certbot --apache -d tudominio.com
+```
+Renovación automática:
+```bash
+sudo certbot renew --dry-run
+```
+
+### 6. Configuración del Dominio
+Se asigna un dominio al servidor mediante DNS, vinculando la IP pública de la instancia con el dominio deseado.
+
+---
+
+## Uso
+1. Acceder a la aplicación mediante el dominio o la dirección IP pública.
+2. Introducir el nombre de una ciudad en el formulario.
+3. Obtener la información meteorológica en tiempo real proporcionada por OpenWeatherMap.
+
+---
+
+## Tecnologías Utilizadas
+- PHP
+- Apache
+- AWS (EC2)
+- OpenWeatherMap API
+- Let's Encrypt (SSL)
+
+---
+
+## Autor
+[Anwar Warrak Amar]
+
+
+
+
+
+
+
+
+
