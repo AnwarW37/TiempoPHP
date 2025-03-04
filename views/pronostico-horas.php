@@ -120,7 +120,7 @@ if ($coordenadas) {
         <?php endif; ?>
          <!-- link para ir al inicio -->       
         <div class="nav-links">
-            <a href="../views/index.php?ciudad=<?php echo urlencode($ciudad); ?>">Volver al clima actual</a>
+            <a href="../index.php?ciudad=<?php echo urlencode($ciudad); ?>">Volver al clima actual</a>
         </div>
     </div>
 </body>
