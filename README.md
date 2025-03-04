@@ -2,6 +2,7 @@
 
 ## Descripción
 Esto es una aplicación desarrollada en PHP que permite consultar el tiempo atmosférico de cualquier ciudad del mundo utilizando la API de [OpenWeatherMap](https://openweathermap.org/).
+
 ![Image](https://github.com/user-attachments/assets/800c4008-93e4-4a4d-8e17-2e8c66fb9b66)
 ![Image](https://github.com/user-attachments/assets/8cb62eac-1a94-47d6-b407-752ede1d31d6)
 ![Image](https://github.com/user-attachments/assets/be7b5c77-a230-4bc6-95d2-411fdce0433c)
