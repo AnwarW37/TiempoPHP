@@ -58,11 +58,12 @@ Se instala y configura un certificado SSL con Let's Encrypt:
 sudo apt install certbot python3-certbot-apache
 #Habilitamos modulo ssl
 sudo a2enmod ssl
-sudo systemctl restart apache2
 #Creamos certificado
 sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt
 #Habilitamos sitio https
 sudo a2ensite default-ssl
+#Reiniciamos servicio
+sudo systemctl restart apache2
 ```
 Renovación automática:
 ```bash
