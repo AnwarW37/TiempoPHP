@@ -71,7 +71,7 @@ sudo certbot renew --dry-run
 ```
 
 ### 6. Configuración del Dominio
-Se asigna un dominio al servidor mediante DNS, vinculando la IP pública de la instancia con el dominio deseado.
+Se asigna un dominio al servidor mediante DNS, vinculando la IP pública de la instancia con el dominio deseado. Yo en este caso he utilizado  [noip](https://my.noip.com/).
 
 ---
 
