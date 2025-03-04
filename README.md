@@ -88,9 +88,6 @@ Se asigna un dominio al servidor mediante DNS, vinculando la IP pública de la i
 
 ---
 
-## Autor
-[Anwar Warrak Amar]
-
 
 
 
