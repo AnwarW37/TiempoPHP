@@ -1,7 +1,7 @@
 # TiempoPHP
 
 ## Descripción
-TiempoPHP es una aplicación desarrollada en PHP que permite consultar el tiempo atmosférico de cualquier ciudad del mundo utilizando la API de [OpenWeatherMap](https://openweathermap.org/).
+Esto es una aplicación desarrollada en PHP que permite consultar el tiempo atmosférico de cualquier ciudad del mundo utilizando la API de [OpenWeatherMap](https://openweathermap.org/).
 
 Este proyecto está desplegado en una instancia de AWS y utiliza Apache como servidor web, asegurando su accesibilidad mediante HTTPS y un dominio personalizado.
 
@@ -55,8 +55,12 @@ sudo systemctl restart apache2
 ### 5. Configuración de HTTPS y Certificado SSL
 Se instala y configura un certificado SSL con Let's Encrypt:
 ```bash
-sudo apt install certbot python3-certbot-apache -y
-sudo certbot --apache -d tudominio.com
+sudo apt install certbot python3-certbot-apache
+#Habilitamos modulo ssl
+sudo a2enmod ssl
+sudo systemctl restart apache2
+#Creamos certificado
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt
 ```
 Renovación automática:
 ```bash
@@ -65,13 +69,6 @@ sudo certbot renew --dry-run
 
 ### 6. Configuración del Dominio
 Se asigna un dominio al servidor mediante DNS, vinculando la IP pública de la instancia con el dominio deseado.
-
----
-
-## Uso
-1. Acceder a la aplicación mediante el dominio o la dirección IP pública.
-2. Introducir el nombre de una ciudad en el formulario.
-3. Obtener la información meteorológica en tiempo real proporcionada por OpenWeatherMap.
 
 ---
 
