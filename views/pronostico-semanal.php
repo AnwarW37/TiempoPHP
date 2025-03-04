@@ -115,7 +115,7 @@ foreach ($dailyData as $day) {
 
         <div class="nav-links">
              <!-- link para ir al inicio -->       
-            <a href="../views/index.php?ciudad=<?php echo urlencode($ciudad); ?>">Volver al clima actual</a>
+            <a href="../index.php?ciudad=<?php echo urlencode($ciudad); ?>">Volver al clima actual</a>
         </div>
     </div>
 
