@@ -6,8 +6,8 @@ require_once 'config/config.php';
 // Crear una instancia de la clase Tiempo, utilizando un token de autenticación
 $tiempo = new Tiempo($token);
 
-// Obtener la ciudad desde el formulario (si no se proporciona, se usa "Madrid" por defecto)
-$ciudad = isset($_GET['ciudad']) ? $_GET['ciudad'] : 'Madrid';
+// Obtener la ciudad desde el formulario (si no se proporciona, se usa "Badajoz" por defecto)
+$ciudad = isset($_GET['ciudad']) ? $_GET['ciudad'] : 'Badajoz';
 
 // Obtener las coordenadas de la ciudad 
 $coordenadas = $tiempo->getGeolocalizacion($ciudad);
